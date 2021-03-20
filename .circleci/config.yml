@@ -10,5 +10,5 @@ jobs:
       - run: npm test 
       - deploy:
           name: aws
-          command: ssh -o "StrictHostKeyChecking no" ubuntu@54.183.19.243"cd ~/circleciexpress; git pull; npm install; npm start &"
+          command: ssh -o "StrictHostKeyChecking no" ubuntu@54.183.19.243 "cd ~/circleciexpress; git pull; npm install; npm start &"
   
