@@ -10,5 +10,4 @@ jobs:
       - run: npm test 
       - deploy:
           name: aws
-          command: ssh -o "StrictHostKeyChecking no" ubuntu@54.183.19.243 "cd ~/circleciexpress; git pull; npm install; npm start &"
-  
+          command: ssh -i "gap.pem" -o "StrictHostKeyChecking no" ubuntu@ec2-54-183-19-243.us-west-1.compute.amazonaws.com "cd ~/circleciexpress; git pull; npm install; npm start &"
